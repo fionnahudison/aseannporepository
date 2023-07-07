@@ -1,0 +1,139 @@
+h1 {
+    color: #333;
+    text-align: justify;
+    font-size: 35px;
+  }
+
+  #map{
+    width: 50%;
+    height: 90vh;
+    align-items: center;
+}
+
+  h2 {
+    color: #333;
+    text-align: Center;
+    font-size: 20px
+  }
+
+  h3 {
+    color: #333;
+    text-align: center;
+    font-size: 20px
+  }
+  
+  p {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px
+  }
+
+  .tab{
+    overflow: hidden;
+    border: none
+  }
+
+  .tab button{
+    background-color: inherit;
+    float: center;
+    border: thin 1px #333;
+    outline: violet;
+    cursor: pointer;
+    padding: 20px 25px;
+    transition: 0.3s;
+    text-size-adjust: 20px;
+  }
+
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  .tab button:active {
+    background-color: #ccc;
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+
+  header {
+    background-image: url('ies\ logo.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  header h1 {
+    color: black;
+    text-align: center;
+  }
+
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    color: #000000;
+  }
+  
+  table{
+    width:  2000px;
+    margin: 10px auto;
+  }
+  
+  table th{
+    padding: 4px 0;
+    background-color: #34aeeb;
+    /* background-color: #fff; */
+    border:  thin solid #1010af;
+  }
+  
+  table td{
+    padding: 10px;
+    border:  thin solid #212121;
+    width: 18%;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  table img{
+    width:  100%;
+  }
+  
+  table td.total-price{
+    font-weight: bold;
+    font-size: 22px;
+  }
+  table a{
+    text-decoration: none;
+    color: darkred;
+    background-color: #ffecef;
+    padding: 10px 15px;
+  }
+  table a:active{
+    background-color: #ccf4d6;
+    color:  green;
+  }
+  
+  table select{
+    padding: 10px;
+    width:  200px;
+    font-size: 16px;
+    border: thin solid #8a1c1c;
+    background-color: transparent;
+  }
+  table select:focus{ 
+    outline: none;
+  }
+  
+  table img{
+    width:  120%;
+  }
+  

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--leaflet css --> 
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <header class="header-container">
+  <h1>Non-profit Organisations in South East Asia</h1>
+        <p>Documenting the NPOs present in South East Asia by country</p>
+        <a href="./website.html"></a>
+  </header>
+
+        <div id="map"></div>
+
+        <!--tab links-->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'Singapore')">Singapore</button>
+    <button class="tablinks" onclick="openTab(event,'Malaysia')">Malaysia</button>
+    <button class="tablinks" onclick="openTab(event,'Indonesia')">Indonesia</button>
+    <button class="tablinks" onclick="openTab(event,'Thailand')">Thailand</button>
+    <button class="tablinks" onclick="openTab(event,'Vietnam')">Vietnam</button>
+    <button class="tablinks" onclick="openTab(event,'Laos')">Laos</button>
+    <button class="tablinks" onclick="openTab(event,'Philippines')">Philippines</button>
+    <button class="tablinks" onclick="openTab(event,'Cambodia')">Cambodia</button>
+    <button class="tablinks" onclick="openTab(event,'Myanmar')">Myanmar</button>
+    <button class="tablinks" onclick="openTab(event,'Brunei')">Brunei</button>
+    <button class="tablinks" onclick="openTab(event,'More Details')">More Details</button>
+  </div>
+
+<style>
+
+  body{
+      margin: 40;
+      padding: 40;
+  }
+      
+  #map{
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+  }
+</style>
+</head>
+<body>
+              
+        <div id="info-display">
+        <h2>Welcome to my website, click on any of the tabs above & scroll down!</h2>
+        </div>
+        
+  <!--tab content-->
+  <div id="Singapore" class="tabcontent">
+    <h2>Singapore</h2>
+    <p>List of NPOs in Singapore</p>
+    <p>*work in progress*</p>
+
+    <table class="table table-striped">
+
+      <thead>
+        <tr class="org-info">
+          <th>Name of organisation</th>
+          <th>Description of organisation</th>
+          <th>Mission/purpose</th>
+          <th>Programmes/projects</th>
+          <th>Funding sources</th>
+          <th>Collaborations</th>
+          <th>Choice of climate actions</th>
+          <th>Number of employees</th>
+          <th>Geographical focus</th>
+          <th>Nationality</th>
+        </tr>
+
+      </thead>
+      <tbody id="data-output" >
+      </tbody>
+
+    </table>
+  </div>
+
+  <div id="Malaysia" class="tabcontent">
+    <h2>Malaysia</h2>
+    <p>List of NPOs in Malaysia</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Indonesia" class="tabcontent">
+    <h2>Indonesia</h2>
+    <p>List of NPOs in Indonesia</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Thailand" class="tabcontent">
+    <h2>Thailand</h2>
+    <p>List of NPOs in Thailand</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Vietnam" class="tabcontent">
+    <h2>Vietnam</h2>
+    <p>List of NPOs in Vietnam</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Laos" class="tabcontent">
+    <h2>Laos</h2>
+    <p>List of NPOs in Laos</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Philippines" class="tabcontent">
+    <h2>Philippines</h2>
+    <p>List of NPOs in Philippines</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Cambodia" class="tabcontent">
+    <h2>Cambodia</h2>
+    <p>List of NPOs in Cambodia</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Myanmar" class="tabcontent">
+    <h2>Myanmar</h2>
+    <p>List of NPOs in Myanmar</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="Brunei" class="tabcontent">
+    <h2>Brunei</h2>
+    <p>List of NPOs in Brunei</p>
+    <p>*work in progress*</p>
+  </div>
+
+  <div id="More Details" class="tabcontent">
+    <h2>Details of this database</h2>
+    <p>Organization Name: NUS LKYSPP IES</p>
+    <p>Location: South East Asia</p>
+    <p>Description: ASEAN Non-profit organisations.</p>
+    <p>Working Supervisor: Dr Ba YUHAO</p>
+    <p>Website completed by: Fionna Hudison</p>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+<!--leaflet js --> 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><</script>
+
+<script>
+    //Map initialization
+var map = L.map('map').setView([2.2180, 115.6628], 5);
+
+//osm layer
+var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+osm.addTo(map);
+
+//OSM Bright
+var OSMBright = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
+OSMBright.addTo(map);
+
+//google street
+googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+googleStreets.addTo(map);
+
+//voyage 
+var Voyage = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20
+});
+Voyage.addTo(map);
+
+//marker
+var myIcon1 = L.icon({
+    iconUrl: 'singapore.png',
+    iconSize: [40,40],
+});
+var singleMarker = L.marker([1.3521, 103.8198], {icon:myIcon1}).addTo(map);
+var Popup = singleMarker.bindPopup('Singapore').openPopup()
+Popup.addTo(map)
+
+var myIcon2 = L.icon({
+    iconUrl: 'malaysia.png',
+    iconSize: [40,40],
+});
+var secondMarker = L.marker([4.2105, 101.9758], {icon:myIcon2}).addTo(map);
+var Popup = secondMarker.bindPopup('Malaysia').openPopup()
+Popup.addTo(map)
+
+var myIcon3 = L.icon({
+    iconUrl: 'indonesia.png',
+    iconSize: [40,40],
+});
+var thirdMarker = L.marker([0.7893, 113.9213], {icon:myIcon3}).addTo(map);
+var Popup = thirdMarker.bindPopup('Indonesia').openPopup()
+Popup.addTo(map)
+
+var myIcon4 = L.icon({
+    iconUrl: 'thailand.png',
+    iconSize: [40,40],
+});
+var fourthMarker = L.marker([15.8700, 100.9925], {icon:myIcon4}).addTo(map);
+var Popup = fourthMarker.bindPopup('Thailand').openPopup()
+Popup.addTo(map)
+
+var myIcon5 = L.icon({
+    iconUrl: 'vietnam.png',
+    iconSize: [40,40],
+});
+var fifthMarker = L.marker([14.0583, 108.2772], {icon:myIcon5}).addTo(map);
+var Popup = fifthMarker.bindPopup('Vietnam').openPopup()
+Popup.addTo(map)
+
+var myIcon6 = L.icon({
+    iconUrl: 'laos.png',
+    iconSize: [40,40],
+});
+var sixthMarker = L.marker([19.8563, 102.4955], {icon:myIcon6}).addTo(map);
+var Popup = sixthMarker.bindPopup('Laos').openPopup()
+Popup.addTo(map)
+
+var myIcon7 = L.icon({
+    iconUrl: 'philippines.png',
+    iconSize: [40,40],
+});
+var seventhMarker = L.marker([12.8797, 121.7740], {icon:myIcon7}).addTo(map);
+var Popup = seventhMarker.bindPopup('Philippines').openPopup()
+Popup.addTo(map)
+
+var myIcon8 = L.icon({
+    iconUrl: 'myanmar.png',
+    iconSize: [40,40],
+});
+var eighthMarker = L.marker([21.9162, 95.9560], {icon:myIcon8}).addTo(map);
+var Popup = eighthMarker.bindPopup('Myanmar').openPopup()
+Popup.addTo(map)
+
+var myIcon9 = L.icon({
+    iconUrl: 'cambodia.png',
+    iconSize: [40,40],
+});
+var ninethMarker = L.marker([12.5657, 104.9910], {icon:myIcon9}).addTo(map);
+var Popup = ninethMarker.bindPopup('Cambodia').openPopup()
+Popup.addTo(map)
+
+var myIcon10 = L.icon({
+    iconUrl: 'brunei.png',
+    iconSize: [40,40],
+});
+var tenthMarker = L.marker([4.5353, 114.7277], {icon:myIcon10}).addTo(map);
+var Popup = tenthMarker.bindPopup('Brunei').openPopup()
+Popup.addTo(map)
+
+console.log(singleMarker.toGeoJSON())
+
+//layer controller
+var baseMaps = {
+    "Open Street Map": osm,
+    "OSM Bright": OSMBright,
+    "Google street": googleStreets,
+    "Voyage": Voyage
+};
+
+var overlayMaps = {
+    "Singapore": singleMarker,
+    "Malaysia": secondMarker,
+    "Indonesia": thirdMarker,
+    "Thailand": fourthMarker,
+    "Vietnam": fifthMarker,
+    "Laos": sixthMarker,
+    "Philippines": seventhMarker,
+    "Myanmar": eighthMarker,
+    "Cambodia": ninethMarker,
+    "Brunei": tenthMarker
+};
+
+L.control.layers(baseMaps, overlayMaps,{collapsed:true }).addTo(map);
+
+</script>

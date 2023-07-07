@@ -1,0 +1,21 @@
+[
+    {
+        "name": "WWF Singapore",
+        "description": "blahblah",
+        "mission": "saving the wildlife",
+        "programmes": "campaigns",
+        "funding": "donations",
+        "collaborations": "government yes",
+        "choice": "mitigation",
+        "numberofemployees": 40,
+        "geographicalfocus": "Singapore",
+        "nationality": "Singaporean"
+    },
+    {
+        "name": "PM Haze",
+        "mission": "promoting the use of sustainable palm oil",
+        "numberofemployees": 4,
+        "region": "Singapore"
+    }
+]
+
