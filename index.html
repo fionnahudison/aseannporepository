@@ -6,150 +6,117 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <!--leaflet css --> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>  
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-  <header class="header-container">
-  <h1>Non-profit Organisations in South East Asia</h1>
-        <p>Documenting the NPOs present in South East Asia by country</p>
-        <a href="./website.html"></a>
-  </header>
-
-        <div id="map"></div>
-
-        <!--tab links-->
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event,'Singapore')">Singapore</button>
-    <button class="tablinks" onclick="openTab(event,'Malaysia')">Malaysia</button>
-    <button class="tablinks" onclick="openTab(event,'Indonesia')">Indonesia</button>
-    <button class="tablinks" onclick="openTab(event,'Thailand')">Thailand</button>
-    <button class="tablinks" onclick="openTab(event,'Vietnam')">Vietnam</button>
-    <button class="tablinks" onclick="openTab(event,'Laos')">Laos</button>
-    <button class="tablinks" onclick="openTab(event,'Philippines')">Philippines</button>
-    <button class="tablinks" onclick="openTab(event,'Cambodia')">Cambodia</button>
-    <button class="tablinks" onclick="openTab(event,'Myanmar')">Myanmar</button>
-    <button class="tablinks" onclick="openTab(event,'Brunei')">Brunei</button>
-    <button class="tablinks" onclick="openTab(event,'More Details')">More Details</button>
-  </div>
-
-<style>
-
-  body{
-      margin: 40;
-      padding: 40;
-  }
-      
-  #map{
-      width: 100%;
-      height: 100vh;
-      align-items: center;
-  }
-</style>
 </head>
+
 <body>
+  <header class="header-container">
+    <h1>Non-profit Organisations in South East Asia</h1>
+          <h5>Documenting the NPOs present in South East Asia by country</h5>
+          <a href="./website.html"></a>
+    </header>
+
+    <div class="wrapper">
+
+      <!--tab links-->
+         <div class="tab">
+                <button class="tablinks" onclick="openTab(event,'Homepage')">HOMEPAGE</button>
+                <button class="tablinks" onclick="openTab(event,'About')">ABOUT</button>
+                <button class="tablinks" onclick="openTab(event,'Database')">DATABASE</button>
+                <button class="tablinks" onclick="openTab(event,'Insights')">INSIGHTS</button>
+                <button class="tablinks" onclick="openTab(event,'Contact Us')">CONTACT US</button>
+              </div>
               
-        <div id="info-display">
-        <h2>Welcome to my website, click on any of the tabs above & scroll down!</h2>
+    <main>
+      <!--tab content-->
+        <div id="Homepage" class="tabcontent">
+              <section class="hero">
+                <h4>Welcome to the Southeast Asian Climate NPOs Repository</h4>
+               </section>
+            <h2>Sample landing page</h2>
+            <p>Welcome to the Southeast Asian Climate NPOs Repository</p>
         </div>
-        
-  <!--tab content-->
-  <div id="Singapore" class="tabcontent">
-    <h2>Singapore</h2>
-    <p>List of NPOs in Singapore</p>
-    <p>*work in progress*</p>
 
-    <table class="table table-striped">
-
-      <thead>
-        <tr class="org-info">
-          <th>Name of organisation</th>
-          <th>Description of organisation</th>
-          <th>Mission/purpose</th>
-          <th>Programmes/projects</th>
-          <th>Funding sources</th>
-          <th>Collaborations</th>
-          <th>Choice of climate actions</th>
-          <th>Number of employees</th>
-          <th>Geographical focus</th>
-          <th>Nationality</th>
-        </tr>
-
-      </thead>
-      <tbody id="data-output" >
-      </tbody>
-
-    </table>
+  <div id="About" class="tabcontent">
+    <h2>ABOUT THE DATABASE</h2>
+    <p>A study originating from the National University of Singapore's Lee Kuan Yew School of Public Policy (LYKSPP) aims to learn more about the non-profit, non-governmental organisational climate action within the Southeast Asian region.
+      Despite the great climate potential of NPOs in the fight against climate change, there is significantly less information and data pertaining to this sector. This is especially so in the SEA region, thus creating research and knowledge gaps which this study by the Institute of Environment and Sustainability (IES) aims to fill. 
+      This repository was created in order to systematically document the existing NPOs in Southeast Asia, with a focus on the ASEAN member countries -- Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines, Cambodia, Laos, Brunei, and Myanmar. It aims to determine and consolidate the various information regarding each NPO in these countries, thereby determining their level of climate action.</p>
+      If you have any comments on the information presented in this repository, do reach out to us via any method of communication on the "Contact Us" section.</p>
   </div>
 
-  <div id="Malaysia" class="tabcontent">
-    <h2>Malaysia</h2>
-    <p>List of NPOs in Malaysia</p>
-    <p>*work in progress*</p>
+  <div id="Database" class="tabcontent">
+    <h2>NPO Database</h2>
+    
+    <div id="map"></div>
+ 
+      <style>
+
+        body{
+            margin: 30px;
+            padding: 80px;
+        }
+            
+        #map{
+            width: 100%;    
+            height: 100vh;
+        }
+    
+    </style>
+
   </div>
 
-  <div id="Indonesia" class="tabcontent">
-    <h2>Indonesia</h2>
-    <p>List of NPOs in Indonesia</p>
-    <p>*work in progress*</p>
+  <div id="Insights" class="tabcontent">
+    <h2>Insights</h2>
+    <p>I had a dream last night we Drove out to see Las Vegas We lost ourselves in the bright lights I wish you could have seen us
+Begging for change to get home Or at least San Francisco Let's put a ten on the high card And spend a summer on the west coastAnd please don't tell me that I'm dreaming
+When all I ever wanted was to dream another sunset with you If I roll over when it's over I'll take this Cali sunrise with me
+And wake up with the fondest memories We made love by the ocean As the waves crashed around you Sunsets never were so bright
+And the skies never so blue You opened up into my arms And we laughed as I held you
+I'll never go back to Georgia Not at least till I have to Down and to the left (Here's a map and the pen, the place you pointed at)
+Be California's best (All I ask, all I ask)</p>
   </div>
+  <div id="Contact Us" class="tabcontent">
+    <h2>Contact Us</h2>
+      <p>Organization Name: NUS LKYSPP IES</p>
+      <p>Location: South East Asia</p>
+      <p>Description: ASEAN Non-profit organisations.</p>
+      <p>Working Supervisor: Dr Ba YUHAO</p>
+      <p>Website completed by: Fionna Hudison</p>
+    </div>
+   </main>
 
-  <div id="Thailand" class="tabcontent">
-    <h2>Thailand</h2>
-    <p>List of NPOs in Thailand</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Vietnam" class="tabcontent">
-    <h2>Vietnam</h2>
-    <p>List of NPOs in Vietnam</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Laos" class="tabcontent">
-    <h2>Laos</h2>
-    <p>List of NPOs in Laos</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Philippines" class="tabcontent">
-    <h2>Philippines</h2>
-    <p>List of NPOs in Philippines</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Cambodia" class="tabcontent">
-    <h2>Cambodia</h2>
-    <p>List of NPOs in Cambodia</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Myanmar" class="tabcontent">
-    <h2>Myanmar</h2>
-    <p>List of NPOs in Myanmar</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="Brunei" class="tabcontent">
-    <h2>Brunei</h2>
-    <p>List of NPOs in Brunei</p>
-    <p>*work in progress*</p>
-  </div>
-
-  <div id="More Details" class="tabcontent">
-    <h2>Details of this database</h2>
-    <p>Organization Name: NUS LKYSPP IES</p>
-    <p>Location: South East Asia</p>
-    <p>Description: ASEAN Non-profit organisations.</p>
-    <p>Working Supervisor: Dr Ba YUHAO</p>
-    <p>Website completed by: Fionna Hudison</p>
   </div>
 
   <script src="index.js"></script>
   <script src="script.js"></script>
 
 </body>
+
+<footer>
+  <div class="footer-content">
+    <!-- Footer content goes here -->
+    <P>FOOTER</P>
+    <footer>
+        <p>&copy; 2023 SEA Climate NPOs. All rights reserved.</p>
+        <nav>
+          <a href="#">Homepage</a>
+          <a href="#">About</a>
+          <a href="#">Database</a>
+          <a href="#">Insights</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+    </footer>
+    
+  </div>
+
+</div>
+</footer>
+
 </html>
 
 <!--leaflet js --> 
@@ -159,18 +126,16 @@
     //Map initialization
 var map = L.map('map').setView([2.2180, 115.6628], 5);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
 //osm layer
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 osm.addTo(map);
-
-//OSM Bright
-var OSMBright = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
-	maxZoom: 20,
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-});
-OSMBright.addTo(map);
 
 //google street
 googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
@@ -187,95 +152,118 @@ var Voyage = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/
 });
 Voyage.addTo(map);
 
+//landscape
+var landscape = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
+landscape.addTo(map);
+
 //marker
 var myIcon1 = L.icon({
-    iconUrl: 'singapore.png',
-    iconSize: [40,40],
+  iconUrl: 'singapore.png',
+  iconSize: [40, 40],
 });
-var singleMarker = L.marker([1.3521, 103.8198], {icon:myIcon1}).addTo(map);
-var Popup = singleMarker.bindPopup('Singapore').openPopup()
-Popup.addTo(map)
+
+var singleMarker = L.marker([1.3521, 103.8198], { icon: myIcon1 }).addTo(map);
+var popupContent = 'Singapore<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = singleMarker.bindPopup(popupContent);
+popup.openPopup();
+
 
 var myIcon2 = L.icon({
     iconUrl: 'malaysia.png',
     iconSize: [40,40],
 });
 var secondMarker = L.marker([4.2105, 101.9758], {icon:myIcon2}).addTo(map);
-var Popup = secondMarker.bindPopup('Malaysia').openPopup()
-Popup.addTo(map)
+var popupContent = 'Malaysia<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = secondMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon3 = L.icon({
     iconUrl: 'indonesia.png',
     iconSize: [40,40],
 });
 var thirdMarker = L.marker([0.7893, 113.9213], {icon:myIcon3}).addTo(map);
-var Popup = thirdMarker.bindPopup('Indonesia').openPopup()
-Popup.addTo(map)
+var popupContent = 'Indonesia<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = thirdMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon4 = L.icon({
     iconUrl: 'thailand.png',
     iconSize: [40,40],
 });
 var fourthMarker = L.marker([15.8700, 100.9925], {icon:myIcon4}).addTo(map);
-var Popup = fourthMarker.bindPopup('Thailand').openPopup()
-Popup.addTo(map)
+var popupContent = 'Thailand<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = fourthMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon5 = L.icon({
     iconUrl: 'vietnam.png',
     iconSize: [40,40],
 });
 var fifthMarker = L.marker([14.0583, 108.2772], {icon:myIcon5}).addTo(map);
-var Popup = fifthMarker.bindPopup('Vietnam').openPopup()
-Popup.addTo(map)
+var popupContent = 'Vietnam<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = fifthMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon6 = L.icon({
     iconUrl: 'laos.png',
     iconSize: [40,40],
 });
 var sixthMarker = L.marker([19.8563, 102.4955], {icon:myIcon6}).addTo(map);
-var Popup = sixthMarker.bindPopup('Laos').openPopup()
-Popup.addTo(map)
+var popupContent = 'Laos<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = sixthMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon7 = L.icon({
     iconUrl: 'philippines.png',
     iconSize: [40,40],
 });
 var seventhMarker = L.marker([12.8797, 121.7740], {icon:myIcon7}).addTo(map);
-var Popup = seventhMarker.bindPopup('Philippines').openPopup()
-Popup.addTo(map)
+var popupContent = 'Philippines<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = seventhMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon8 = L.icon({
     iconUrl: 'myanmar.png',
     iconSize: [40,40],
 });
 var eighthMarker = L.marker([21.9162, 95.9560], {icon:myIcon8}).addTo(map);
-var Popup = eighthMarker.bindPopup('Myanmar').openPopup()
-Popup.addTo(map)
+var popupContent = 'Myanmar<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = eighthMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon9 = L.icon({
     iconUrl: 'cambodia.png',
     iconSize: [40,40],
 });
 var ninethMarker = L.marker([12.5657, 104.9910], {icon:myIcon9}).addTo(map);
-var Popup = ninethMarker.bindPopup('Cambodia').openPopup()
-Popup.addTo(map)
+var popupContent = 'Cambodia<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = ninethMarker.bindPopup(popupContent);
+popup.openPopup();
 
 var myIcon10 = L.icon({
     iconUrl: 'brunei.png',
     iconSize: [40,40],
 });
 var tenthMarker = L.marker([4.5353, 114.7277], {icon:myIcon10}).addTo(map);
-var Popup = tenthMarker.bindPopup('Brunei').openPopup()
-Popup.addTo(map)
+var popupContent = 'Brunei<br><a href="https://youtube.com">Click here to learn more</a>';
+var popup = tenthMarker.bindPopup(popupContent);
+popup.openPopup();
+
+var popup = L.popup();
+
+
 
 console.log(singleMarker.toGeoJSON())
 
 //layer controller
 var baseMaps = {
     "Open Street Map": osm,
-    "OSM Bright": OSMBright,
     "Google street": googleStreets,
-    "Voyage": Voyage
+    "Voyage": Voyage,
+    "Landscape": landscape
 };
 
 var overlayMaps = {
@@ -291,6 +279,10 @@ var overlayMaps = {
     "Brunei": tenthMarker
 };
 
-L.control.layers(baseMaps, overlayMaps,{collapsed:true }).addTo(map);
+L.control.layers(baseMaps, overlayMaps,{collapsed:true}).addTo(map);
+
+setInterval(function () {
+   map.invalidateSize();
+}, 100);
 
 </script>
